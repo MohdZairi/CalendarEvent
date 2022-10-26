@@ -5,11 +5,11 @@ $username= "root";
 $password= "";
 $dname = "calendar";
 
-$conn = mysqli_connect($hostname,$username,$password,$dname);
+$con = mysqli_connect($hostname,$username,$password,$dname);
 
-if($conn -> connect_error)
+if($con -> connect_error)
 {
-    die("Connection Failed" . $conn->connect_error);
+    die("Connection Failed" . $con->connect_error);
 }
 
 
