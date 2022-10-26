@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <title>Dynamic Calendar</title>
 <link rel = "icon" href ="/CalendarEvent/img/calendar.png">
@@ -15,7 +15,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-
 <body>
 <div class="container">
 	<div class="row">
@@ -40,7 +39,7 @@
 					<div class="row">
 						<div class="col-sm-12">  
 							<div class="form-group">
-							  <label for="event_name">Event Name</label>
+							  <label for="event_name">Event name</label>
 							  <input type="text" name="event_name" id="event_name" class="form-control" placeholder="Enter your event name">
 							</div>
 						</div>
@@ -48,13 +47,13 @@
 					<div class="row">
 						<div class="col-sm-6">  
 							<div class="form-group">
-							  <label for="event_start_date">Event Start</label>
+							  <label for="event_start_date">Event start</label>
 							  <input type="date" name="event_start_date" id="event_start_date" class="form-control onlydatepicker" placeholder="Event start date">
 							 </div>
 						</div>
 						<div class="col-sm-6">  
 							<div class="form-group">
-							  <label for="event_end_date">Event End</label>
+							  <label for="event_end_date">Event end</label>
 							  <input type="date" name="event_end_date" id="event_end_date" class="form-control" placeholder="Event end date">
 							</div>
 						</div>
@@ -68,6 +67,9 @@
 	</div>
 </div>
 <!-- End popup dialog box -->
+
+<br>
+<center>Developed by <a href="https://shinerweb.com/">Shinerweb</a></center>
 </body>
 <script>
 $(document).ready(function() {
@@ -126,8 +128,8 @@ var event_start_date=$("#event_start_date").val();
 var event_end_date=$("#event_end_date").val();
 if(event_name=="" || event_start_date=="" || event_end_date=="")
 {
-    alert("Please enter all required details.");
-    return false;
+alert("Please enter all required details.");
+return false;
 }
 $.ajax({
  url:"save_event.php",
@@ -154,4 +156,4 @@ $.ajax({
 return false;
 }
 </script>
-</html>
+</html> 
